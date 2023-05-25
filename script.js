@@ -23,9 +23,23 @@ function updateCountdown() {
       const timeUntilAlarm = alarm - now;
       const secondsRemaining = Math.floor(timeUntilAlarm / 1000);
   
-      const countdownElement = document.getElementById("countdown");
+      const hoursElement= document.getElementById("hours");
+      const minutesElement= document.getElementById("minutes");
+      const secondsElement= document.getElementById("seconds");
+
+      //Credo sia corretto, ma non ne sono sicuro
+      if (secondsRemaining > 0) {
+        const hours = Math.floor(secondsRemaining / 3600);
+        const minutes = Math.floor((secondsRemaining % 3600) / 60);
+        const seconds = secondsRemaining % 60;
   
-      
+        setTimeout(updateCountdown, 1000);
+        hoursElement.textContent = hours + "hours";
+        minutesElement.textContent = minutes + "minutes";
+        secondsElement.textContent = seconds + "seconds";
+      } else {
+        countdownElement.textContent = "Sono le 9:30. Inizia una nuova lezione!";
+      }
     }
   
     updateCountdown();
