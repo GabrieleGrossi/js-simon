@@ -12,8 +12,25 @@ main div.box{
     background-color: white;
     text-align: center;
     width: 500px;
-    height: 500px;
+    height: 350px;
     margin: 200px auto;
     border-radius: 50px;
+}
+
+.flex{
     display: flex;
+}
+main div.box h1{
+    margin: 0 auto ;
+    padding-top: 55px;
+}
+main div.box div.flex h2{
+    margin: 0 auto ;
+    margin-top: 55px;
+    font-size: 50px;
+}
+main div.box div.flex h3{
+    margin: 0 auto ;
+    margin-top: 30px;
+    font-size: 40px;
 }

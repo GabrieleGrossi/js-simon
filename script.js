@@ -34,9 +34,9 @@ function updateCountdown() {
         const seconds = secondsRemaining % 60;
   
         setTimeout(updateCountdown, 1000);
-        hoursElement.textContent = hours + "hours";
-        minutesElement.textContent = minutes + "minutes";
-        secondsElement.textContent = seconds + "seconds";
+        hoursElement.textContent = hours ;
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
       } else {
         countdownElement.textContent = "Sono le 9:30. Inizia una nuova lezione!";
       }
