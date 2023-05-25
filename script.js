@@ -15,7 +15,11 @@ function updateCountdown() {
     alarm.setMinutes(30);
     alarm.setSeconds(0);
 
-    
+    if (now > alarm) {
+        // Se l'ora corrente è già passata rispetto all'orario dell'allarme,
+        // impostiamo l'allarme per il giorno successivo
+        alarm.setDate(alarm.getDate() + 1);
+      }
     }
   
     updateCountdown();
