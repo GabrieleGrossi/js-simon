@@ -20,6 +20,12 @@ function updateCountdown() {
         // impostiamo l'allarme per il giorno successivo
         alarm.setDate(alarm.getDate() + 1);
       }
+      const timeUntilAlarm = alarm - now;
+      const secondsRemaining = Math.floor(timeUntilAlarm / 1000);
+  
+      const countdownElement = document.getElementById("countdown");
+  
+      
     }
   
     updateCountdown();
